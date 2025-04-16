@@ -397,7 +397,7 @@
   popup.innerHTML = `
   <div class="popup-inner">
     <div class="popup-header">
-      <h3 class="popup-title">${escapeHtml(hotspot.title || 'Нет заголовка')}</h3>
+      <h3 class="popup-title">${hotspot.title || 'Нет заголовка'}</h3>
       <div class="popup-close">
         <span class="bar1"></span>
         <span class="bar2"></span>
@@ -406,15 +406,15 @@
     <div class="popup-body">
       <img src="${escapeHtml(hotspot.image || 'img/default.jpg')}" alt="Изображение" class="popup-image">
       <div class="popup-text-block">
-        <div class="popup-section-label">Аудио</div>
+        <!---<div class="popup-section-label">Аудио</div>-->
         ${hotspot.audio ? `
           <audio controls class="popup-audio">
             <source src="${escapeHtml(hotspot.audio)}" type="audio/mpeg">
             Ваш браузер не поддерживает аудио.
           </audio>
         ` : ''}
-        <div class="popup-section-label">Описание</div>
-        <div class="popup-text">${escapeHtml(hotspot.text || 'Нет описания')}</div>
+        <!---<div class="popup-section-label">Описание</div>-->
+        <div class="popup-text">${hotspot.text || 'Нет описания'}</div>
       </div>
       
     </div>

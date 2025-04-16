@@ -903,12 +903,14 @@ body.view-control-buttons .viewControlButton {
   overflow-wrap: break-word;
   white-space: normal; 
   margin-right: 30px; 
+  font-weight: 700;
+  line-height: 30px;
 }
 
 .popup-text {
   color: #333;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.2;
   word-wrap: break-word;
   word-break: break-word;
   white-space: normal;
@@ -916,13 +918,13 @@ body.view-control-buttons .viewControlButton {
   overflow-wrap: break-word;
   text-align: justify;
   /* ограничения и скролл */
-  max-height: 150px;
+  max-height: 200px;
   overflow-y: auto;
-  padding-right: 15px;
+  padding-right: 25px;
   box-sizing: border-box;
 }
 .popup-text.portrait {
-  max-height: 400px;
+  max-height: 410px; /*350px если добавляем заголовки "аудио и описание"*/
 }
 
 .popup-text::-webkit-scrollbar {
@@ -983,7 +985,7 @@ body.view-control-buttons .viewControlButton {
 
 .popup-content {
   background: #fff;
-  padding: 20px 20px 30px 20px;
+  padding: 20px 20px 30px 25px;
   border-radius: 12px;
   max-width: 500px;
   width: 100%;
@@ -1056,6 +1058,7 @@ body.view-control-buttons .viewControlButton {
   width: 50%;
   max-width: 50%;
   margin: 0;
+  max-height: 466.66px;
 }
 
 
@@ -1074,7 +1077,7 @@ body.view-control-buttons .viewControlButton {
 
 .popup-body.horizontal .popup-text-block {
   flex: 1;
-  padding-left: 15px;
+  padding-left: 25px;
 }
 
 .popup-audio {
@@ -1092,4 +1095,8 @@ body.view-control-buttons .viewControlButton {
   font-size: 14px;
   color: #555;
   margin: 5px 0 3px;
+}
+
+b {
+  font-weight: bold;
 }
