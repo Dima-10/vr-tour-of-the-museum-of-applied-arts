@@ -1048,6 +1048,7 @@ body.view-control-buttons .viewControlButton {
 .popup-image {
   width: 100%;
   height: auto;
+  max-height: 370px;
   object-fit: cover;
   border-radius: 10px;
   margin: 10px 0;
