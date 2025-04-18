@@ -1109,3 +1109,115 @@ body.view-control-buttons .viewControlButton {
 b {
   font-weight: bold;
 }
+
+.popup-zoom-overlay .popup-zoom-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.popup-zoom-overlay .popup-zoom-close span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: background-color 0.3s;
+}
+
+.popup-zoom-overlay .popup-zoom-close .bar1 {
+  transform: rotate(45deg);
+  top: 10px;
+  left: 0;
+}
+
+.popup-zoom-overlay .popup-zoom-close .bar2 {
+  transform: rotate(-45deg);
+  top: 10px;
+  left: 0;
+}
+
+.popup-zoom-overlay .popup-zoom-close:hover span {
+  background-color: #ccc;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .popup-content, .popup-content.portrait {
+    max-width: 500px;
+    max-height: 90vh;
+    padding: 15px 15px 20px 15px;
+    border-radius: 10px;
+  }
+
+  .popup-body {
+    flex-direction: column !important; /* отключаем горизонтальный layout */
+    align-items: stretch;
+  }
+
+  .popup-image,
+  .popup-image.portrait {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+    margin: 0 0 10px 0;
+  }
+
+  .popup-header {
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .popup-title {
+    font-size: 18px;
+    line-height: 22px;
+    margin-right: 0;
+  }
+
+  .popup-text {
+    font-size: 12px;
+    line-height: 1.2;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  .popup-text.portrait {
+    max-height: 200px;
+  }
+
+  .popup-text-block {
+    padding-left: 0 !important;
+  }
+
+  .popup-zoom-overlay {
+    padding: 10px;
+  }
+
+  .popup-zoom-image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .popup-zoom-overlay .popup-zoom-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+}

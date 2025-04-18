@@ -419,6 +419,10 @@
       
     </div>
     <div class="popup-zoom-overlay" style="display: none;">
+      <div class="popup-close popup-zoom-close">
+        <span class="bar1"></span>
+        <span class="bar2"></span>
+      </div>
       <img class="popup-zoom-image" src="" alt="Увеличенное изображение">
     </div>
   </div>
@@ -470,7 +474,8 @@
   });
 
   // Закрытие
-  zoomOverlay.addEventListener('click', () => {
+  const zoomCloseBtn = popup.querySelector('.popup-zoom-close');
+  zoomCloseBtn.addEventListener('click', () => {
     zoomOverlay.style.display = 'none';
   });
 
