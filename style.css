@@ -920,7 +920,7 @@ body.view-control-buttons .viewControlButton {
   /* ограничения и скролл */
   max-height: 200px;
   overflow-y: auto;
-  padding-right: 25px;
+  /*padding-right: 25px;*/ /*теперь через js*/
   box-sizing: border-box;
 }
 .popup-text.portrait {
@@ -1056,10 +1056,18 @@ body.view-control-buttons .viewControlButton {
 
 /* Портретная картинка — ширина 50% */
 .popup-image.portrait {
+  /*
   width: 50%;
   max-width: 50%;
   margin: 0;
+  max-height: 466.66px;*/
+  height: 466.66px;
   max-height: 466.66px;
+  width: auto;
+  max-width: 50%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0;
 }
 
 

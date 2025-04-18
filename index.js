@@ -548,6 +548,29 @@
   return wrapper;
   }
 
+  //Функция для паддинга при скроллящемся тексте
+  function updatePopupPadding() {
+    const popups = document.querySelectorAll('.popup-text');
+  
+    popups.forEach(popup => {
+      if (popup.scrollHeight > popup.clientHeight) {
+        popup.style.paddingRight = '25px'; // показываем паддинг
+      } else {
+        popup.style.paddingRight = '0px';  // убираем, если скролла нет
+      }
+    });
+  }
+  
+  
+  
+  // вызывать при открытии попапа
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('.hotspot')) {
+      // с задержкой, чтобы popup успел появиться
+      setTimeout(updatePopupPadding, 100);
+    }
+  });
+  
 
   // Prevent touch and scroll events from reaching the parent element.
   function stopTouchAndScrollEventPropagation(element, eventList) {
