@@ -1150,8 +1150,46 @@ b {
 
 
 
+@media (max-width: 1440px) {
+  .popup-image.landscape {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    margin: 0 0 10px 0;
+  }
+  .popup-text {
+    font-size: 14px;
+    line-height: 1.2;
+    max-height: 100px;
+    overflow-y: auto;
+  }
 
-
+}
+@media (max-width: 1024px) {
+  .popup-text {
+    font-size: 14px;
+    line-height: 1.2;
+    max-height: 100px;
+    overflow-y: auto;
+  }
+  .popup-image.landscape {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    margin: 0 0 10px 0;
+  }
+  
+  .popup-image.portrait {
+    max-height: 300px;
+  }
+  .popup-text.portrait {
+    max-height: 240px;
+  }
+}
 @media (max-width: 768px) {
   .popup-content, .popup-content.portrait {
     max-width: 500px;
